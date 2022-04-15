@@ -10,14 +10,21 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      Project.belongsTo(models.User, {foreignKey: 'userId'})
+      Project.belongsTo(models.User, {foreignKey: 'user_id'})
     }
   }
   Project.init({
     title: DataTypes.STRING,
     body: DataTypes.TEXT,
     image: DataTypes.TEXT,
-    userId: DataTypes.INTEGER
+    user_id: {
+      type: DataTypes.INTEGER, 
+      onDelete: 'CASCADE',
+      references: {
+        model: 'users',
+        key: 'id'
+      }
+    } 
   }, {
     sequelize,
     modelName: 'Project',
