@@ -1,25 +1,25 @@
 const router = require('express').Router()
-const controller = require('../controllers/PostController')
+const controller = require('../controllers/ProjectController')
 const middleware = require('../middleware')
 
-router.get('/', controller.GetPosts)
-router.post(
+router.get('/', controller.GetProjects)
+router.project(
   '/',
   middleware.stripToken,
   middleware.verifyToken,
-  controller.CreatePost
+  controller.CreateProject
 )
 router.put(
-  '/:post_id',
+  '/:project_id',
   middleware.stripToken,
   middleware.verifyToken,
-  controller.UpdatePost
+  controller.UpdateProject
 )
 router.delete(
-  '/:post_id',
+  '/:project_id',
   middleware.stripToken,
   middleware.verifyToken,
-  controller.DeletePost
+  controller.DeleteProject
 )
 
 module.exports = router
