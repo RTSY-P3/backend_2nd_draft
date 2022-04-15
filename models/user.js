@@ -20,10 +20,10 @@ module.exports = (sequelize, DataTypes) => {
         through: models.UserFollower,
         foreignKey: 'followerId'
       }),
-      User.belongsToMany(models.Comment, {
+      User.hasMany(models.Comment, {
         as: 'comments',
         through: models.Comment,
-        foreignKey: 'followerId'
+        foreignKey: ''
       })
 
     }
@@ -54,3 +54,4 @@ module.exports = (sequelize, DataTypes) => {
     }
   )
   return User
+}
