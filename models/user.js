@@ -25,6 +25,7 @@ module.exports = (sequelize, DataTypes) => {
         through: models.Comment,
         foreignKey: ''
       })
+      User.hasMany(models.Project, { foreignKey: 'user_id'})
 
     }
   }
@@ -54,4 +55,3 @@ module.exports = (sequelize, DataTypes) => {
     }
   )
   return User
-}
