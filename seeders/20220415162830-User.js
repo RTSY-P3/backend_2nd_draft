@@ -1,24 +1,20 @@
-'use strict';
+// 'use strict';
+// const falso = require('@ngneat/falso')
+// const users = [...Array(100)].map(() => ({
+//   name: falso.randFullName(),
+//   email: falso.randEmail(),
+//   password: falso.randPassword(),
+//   createdAt: falso.randPastDate(),
+//   updatedAt: falso.randRecentDate()
+// }))
 
-module.exports = {
-  async up (queryInterface, Sequelize) {
-    /**
-     * Add seed commands here.
-     *
-     * Example:
-     * await queryInterface.bulkInsert('People', [{
-     *   name: 'John Doe',
-     *   isBetaMember: false
-     * }], {});
-    */
-  },
+// module.exports = {
+//   up: (queryInterface, Sequelize) => {
+//     return queryInterface.bulkInsert('users', users)
+    
+//   },
 
-  async down (queryInterface, Sequelize) {
-    /**
-     * Add commands to revert seed here.
-     *
-     * Example:
-     * await queryInterface.bulkDelete('People', null, {});
-     */
-  }
-};
+//   down: (queryInterface, Sequelize) => {
+//     return queryInterface.bulkDelete('users')
+//   }
+// };

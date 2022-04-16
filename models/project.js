@@ -15,8 +15,8 @@ module.exports = (sequelize, DataTypes) => {
   }
   Project.init({
     title: DataTypes.STRING,
-    body: DataTypes.TEXT,
-    image: DataTypes.TEXT,
+    body: DataTypes.STRING,
+    image: DataTypes.STRING,
     user_id: {
       type: DataTypes.INTEGER, 
       onDelete: 'CASCADE',

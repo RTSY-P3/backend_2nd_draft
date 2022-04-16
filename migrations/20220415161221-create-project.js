@@ -12,10 +12,10 @@ module.exports = {
         type: Sequelize.STRING
       },
       body: {
-        type: Sequelize.TEXT
+        type: Sequelize.STRING
       },
       image: {
-        type: Sequelize.TEXT
+        type: Sequelize.STRING
       },
       user_id:{
         type: Sequelize.INTEGER,
